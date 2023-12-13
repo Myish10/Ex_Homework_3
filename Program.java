@@ -14,7 +14,6 @@ public class Program {
 
     public static void main(String[] args) {
         List<String[]> list = readData(3);
-        //String nameFile = list.get(0)[0];
         checkFormatData(list);
         fileWrite(list);
 
