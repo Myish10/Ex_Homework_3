@@ -14,6 +14,7 @@ public class Program {
 
     public static void main(String[] args) {
         List<String[]> list = readData(3);
+        //String nameFile = list.get(0)[0];
         checkFormatData(list);
         fileWrite(list);
 
@@ -79,7 +80,7 @@ public class Program {
     }
 
     public static void fileWrite(List<String[]> list){
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter("names.txt", false))) {
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(list.get(0)[0] + ".txt", false))) {
             for (String[] el: list) {
                 writer.write(String.join(" ", el[0], el[1], el[2], el[3], el[4], el[5]) + "\n");
             }
